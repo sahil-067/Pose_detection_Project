@@ -1,27 +1,24 @@
-1.) Installing mediapipe:
+★ Installing Libraries:
 
 pip install mediapipe
-
-2.) Installing pyautogui:
-
 pip install pyautogui
+pip install opencv-python
 
-3.) Software:
 
-Idle Python 3.11 or later
+★ Software:
+Latest Python IDLE for supporting cv2 module
 
-4.) Online Subway Surfers Game:
-
+★ Online Subway Surfers Game:
 https://poki.com/en/g/subway-surfers
 
-5.) Good Webcam
+★ Good Webcam
 
 -->Tutorial<--
 
-Set up IDLE and install dependencies by command prompt
+★ Set up IDLE and install dependencies by command prompt
 
-Run the Program and open the online game subway surfers
+★ Run the Program and open subway surfers online
 
-Stand against webcam and join your hands to initialize the program
+★ Stand against webcam and join your hands to initialize the program
 
 Now play and have fun... 
