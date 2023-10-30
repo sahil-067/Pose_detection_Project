@@ -1,0 +1,35 @@
+OpenCV on Wheels
+Pre-built CPU-only OpenCV packages for Python.
+
+Check the manual build section if you wish to compile the bindings from source to enable additional modules such as CUDA.
+
+Installation and Usage
+If you have previous/other manually installed (= not installed via pip) version of OpenCV installed (e.g. cv2 module in the root of Python's site-packages), remove it before installation to avoid conflicts.
+
+Make sure that your pip version is up-to-date (19.3 is the minimum supported version): pip install --upgrade pip. Check version with pip -V. For example Linux distributions ship usually with very old pip versions which cause a lot of unexpected problems especially with the manylinux format.
+
+Select the correct package for your environment:
+
+There are four different packages (see options 1, 2, 3 and 4 below) and you should SELECT ONLY ONE OF THEM. Do not install multiple different packages in the same environment. There is no plugin architecture: all the packages use the same namespace (cv2). If you installed multiple different packages in the same environment, uninstall them all with pip uninstall and reinstall only one package.
+
+a. Packages for standard desktop environments (Windows, macOS, almost any GNU/Linux distribution)
+
+Option 1 - Main modules package: pip install opencv-python
+Option 2 - Full package (contains both main modules and contrib/extra modules): pip install opencv-contrib-python (check contrib/extra modules listing from OpenCV documentation)
+b. Packages for server (headless) environments (such as Docker, cloud environments etc.), no GUI library dependencies
+
+These packages are smaller than the two other packages above because they do not contain any GUI functionality (not compiled with Qt / other GUI components). This means that the packages avoid a heavy dependency chain to X11 libraries and you will have for example smaller Docker images as a result. You should always use these packages if you do not use cv2.imshow et al. or you are using some other package (such as PyQt) than OpenCV to create your GUI.
+
+Option 3 - Headless main modules package: pip install opencv-python-headless
+Option 4 - Headless full package (contains both main modules and contrib/extra modules): pip install opencv-contrib-python-headless (check contrib/extra modules listing from OpenCV documentation)
+Import the package:
+
+import cv2
+
+All packages contain Haar cascade files. cv2.data.haarcascades can be used as a shortcut to the data folder. For example:
+
+cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+
+Read OpenCV documentation
+
+Before opening a new issue, read the FAQ below and have a look at the other issues which are already open.
